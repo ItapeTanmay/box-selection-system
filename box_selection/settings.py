@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     'boxes',
 ]
 
-TEST_RUNNER = 'boxes.test_runner.RichTestRunner'
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
