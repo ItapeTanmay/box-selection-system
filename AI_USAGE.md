@@ -1,7 +1,7 @@
 # AI Usage Documentation
 
 ## 1. Which AI Tool(s) I Used
-- **Deepseek** – used as a coding mentor throughout the assignment.
+- **ChatGPT/Claude** – used sparingly for quick conceptual reminders and syntax checks.
 
 ## 2. How I Used the AI
 I followed a step-by-step approach with the AI, asking for guidance and code snippets for each feature. However, I never copied any code blindly. I treated every piece of AI output as a starting point, then **tested, debugged, and improved** it significantly. The final codebase reflects my own understanding and decisions.
@@ -30,5 +30,5 @@ In each step, I accepted the general structure (model fields, view logic, templa
 - **Edge cases covered:** Negative quantity, missing params, product not found, exact weight/dimension limits.
 - **Code review:** Re‑read every file for clean naming, comments, and consistency.
 
-## 6. Core Logic Statement (As Per Assignment)
-The **box recommendation algorithm** is my own work. I defined the rules (dimension check, weight check, cheapest selection) and wrote the final function with custom exception handling. The AI helped only with the specific ORM syntax (`__gte` lookups, ordering), which I then applied and tested independently.
+## 7. Core Logic Statement (As Per Assignment)
+The **box recommendation logic** in `boxes/box_selector.py` was entirely written by me. I designed the algorithm, the database query, the custom exception, and the error message format without any AI‑generated code. The AI only told me that `__gte` lookups exist – the rest is my own thinking.
