@@ -1,7 +1,7 @@
 # AI Usage Documentation
 
 ## 1. Which AI Tool(s) I Used
-- **ChatGPT/Claude** – used sparingly for quick conceptual reminders and syntax checks.
+- **DeepSeek** – used sparingly for quick conceptual reminders and syntax checks.
 
 ## 2. How I Used the AI
 I followed a step-by-step approach with the AI, asking for guidance and code snippets for each feature. However, I never copied any code blindly. I treated every piece of AI output as a starting point, then **tested, debugged, and improved** it significantly. The final codebase reflects my own understanding and decisions.
