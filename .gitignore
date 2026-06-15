@@ -1,0 +1,22 @@
+# .gitignore
+# Virtual environment
+venv/
+
+# Environment secrets
+.env
+
+# Database
+db.sqlite3
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db

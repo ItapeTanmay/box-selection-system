@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Box Selection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Select Shipping Box</h1>
+
+        <form method="post" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.product.label_tag }}
+                {{ form.product }}
+                {% if form.product.errors %}
+                    <div class="text-danger">{{ form.product.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                {{ form.quantity.label_tag }}
+                {{ form.quantity }}
+                {% if form.quantity.errors %}
+                    <div class="text-danger">{{ form.quantity.errors }}</div>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn btn-primary">Get Recommendation</button>
+        </form>
+
+        {% if success %}
+            <div class="alert alert-success mt-4">
+                <h4>Recommended Box: {{ result.box.name }}</h4>
+                <ul>
+                    <li><strong>Product:</strong> {{ result.product }}</li>
+                    <li><strong>Quantity:</strong> {{ result.quantity }}</li>
+                    <li><strong>Total Weight:</strong> {{ result.total_weight }} kg</li>
+                    <li><strong>Box Dimensions:</strong> {{ result.box.dimensions }}</li>
+                    <li><strong>Box Max Weight:</strong> {{ result.box.max_weight }} kg</li>
+                    <li><strong>Shipping Cost:</strong> ₹{{ result.box.cost }}</li>
+                </ul>
+            </div>
+        {% elif error %}
+            <div class="alert alert-danger mt-4">{{ error }}</div>
+        {% endif %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
