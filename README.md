@@ -13,7 +13,7 @@ A Django-based system that recommends the most suitable shipping box for an orde
 ## Tech Stack
 
 - Python 3
-- Django 5.2 (or 6.x)
+- Django 
 - SQLite (default)
 - Bootstrap 5 (CDN)
 - python‑decouple for environment variables
